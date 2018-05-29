@@ -2,38 +2,70 @@
 <!--tab -->
 <view class="tab border-1px">
    <view class="tab-item">
-    <a class="{{status==0 ? 'active':''}}" bindtap="tabChange" data-type="0">当前订单</a>
+    <a class="{{status==0 ? 'active':''}}" bindtap="currentOrderChange" data-type="0">当前订单</a>
    </view> 
    <view class="tab-item">
-    <a class="{{status==1 ? 'active':''}}" bindtap="tabChange" data-type="1">历史订单</a>
+    <a class="{{status==1 ? 'active':''}}" bindtap="historyOrderChange" data-type="1">历史订单</a>
    </view> 
 </view>
 <!--tab -->
 
-<view class="container">
+<view class="goods" wx:if="{{status==1||item.status==status}}">
+ <view class="menu-wrapper">
+    <scroll-view scroll-y="true" style="height: 450px;">
+   <view wx:for="{{currentOrderList}}"  class="OrderCell" wx:for-item="data" >
 
-<view wx:for="{{list}}"  class="OrderCell" wx:for-item="data" >
+      <image class='OrderIcon' mode='scaleToFit' src='http://www.biaobaiju.com/uploads/20180111/02/1515610232-vkCOFYmeKd.jpg' ></image>
 
-<image class='OrderIcon' mode='scaleToFit' src='http://www.biaobaiju.com/uploads/20180111/02/1515610232-vkCOFYmeKd.jpg' ></image>
+      <view class='OrderMain'>
+      <text class='IDView'>订单号:{{data.order_id}}</text>
 
-<view class='OrderMain'>
-<text class='IDView'>订单号:{{data.order_id}}</text>
+      <view class='line1'>
+        <text class='OrderTitle'> {{data.district_name}}</text>
+        <text class='OrderPrice' >￥{{data.total_amount}}</text>
+      </view>
 
-<view class='line1'>
-  <text class='OrderTitle'> {{data.district_name}}</text>
-  <text class='OrderPrice' >￥{{data.total_amount}}</text>
+      <view class='line2'>
+        <text class='OrderTime'> {{data.create_time}}</text>
+        <text class='OrderStatus'>{{data.order_status_value}}</text>
+      </view>
+
+      <view class='line3'>
+      <view class='blackLine'></view>
+      </view>
+      </view>
+      </view>
+
+    </scroll-view>
+    </view>
 </view>
 
-<view class='line2'>
-  <text class='OrderTime'> {{data.create_time}}</text>
-  <text class='OrderStatus'>{{data.order_status_value}}</text>
-</view>
+<view class="goods" wx:if="{{status==0||item.status==status}}">
+ <view class="menu-wrapper">
+    <scroll-view scroll-y="true" style="height: 450px;">
+   <view wx:for="{{currentOrderList}}"  class="OrderCell" wx:for-item="data" >
 
-<view class='line3'>
-<view class='blackLine'></view>
-</view>
-</view>
+      <image class='OrderIcon' mode='scaleToFit' src='http://www.biaobaiju.com/uploads/20180111/02/1515610232-vkCOFYmeKd.jpg' ></image>
 
+      <view class='OrderMain'>
+      <text class='IDView'>订单号:{{data.order_id}}</text>
 
+      <view class='line1'>
+        <text class='OrderTitle'> {{data.district_name}}</text>
+        <text class='OrderPrice' >￥{{data.total_amount}}</text>
+      </view>
+
+      <view class='line2'>
+        <text class='OrderTime'> {{data.create_time}}</text>
+        <text class='OrderStatus'>{{data.order_status_value}}</text>
+      </view>
+
+      <view class='line3'>
+      <view class='blackLine'></view>
+      </view>
+      </view>
+      </view>
+
+    </scroll-view>
+    </view>
 </view>
- </view>

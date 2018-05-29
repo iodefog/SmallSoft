@@ -1,11 +1,21 @@
 //index.js
 
 import{
-  RequestOrderList
+  RequestCurrentOrderList,
+  RequestHistoryOrderList
 }from '../api/apis.js'
 
 //获取应用实例
 const app = getApp()
+
+var initOrder = {
+  totalNum: 0,
+  totalPrice: 0,
+  totalGoodsPrice: 0,
+  totalPackingFee: 0,
+  goodsNums: {},
+  goods: []
+}
 
 Page({
   data: {
@@ -13,93 +23,18 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+   
+    currentOrderList:[],
 
-    list:[
-      {
-        "order_id": 6355448061518548992,
-        "pay_mode": 2,
-        "pay_mode_value": "支付后置",
-        "order_status": 2,
-        "order_status_value": "已完成",
-        "pay_status": 2,
-        "pay_status_value": "已支付",
-        "is_offline_pay": 0,
-        "is_invoice": 0,
-        "total_amount": "0.00",
-        "real_amount": "0.10",
-        "invoice_amount": "0.00",
-        "create_time": "2018-01-24 11:43:33",
-        "district_name": "桃花源厅",
-        "district_photo": "",
-        "district_price": "0.00",
-        "district_min_price": "0.00",
-        "district_interval": 200,
-        "district_desc": "8人"
-        },
-      {
-        "order_id": 6355448061518548992,
-        "pay_mode": 2,
-        "pay_mode_value": "支付后置",
-        "order_status": 2,
-        "order_status_value": "已完成",
-        "pay_status": 2,
-        "pay_status_value": "已支付",
-        "is_offline_pay": 0,
-        "is_invoice": 0,
-        "total_amount": "0.00",
-        "real_amount": "0.10",
-        "invoice_amount": "0.00",
-        "create_time": "2018-01-24 11:43:33",
-        "district_name": "桃花源厅",
-        "district_photo": "",
-        "district_price": "0.00",
-        "district_min_price": "0.00",
-        "district_interval": 200,
-        "district_desc": "8人"
-      },
-      {
-        "order_id": 6355448061518548992,
-        "pay_mode": 2,
-        "pay_mode_value": "支付后置",
-        "order_status": 2,
-        "order_status_value": "已完成",
-        "pay_status": 2,
-        "pay_status_value": "已支付",
-        "is_offline_pay": 0,
-        "is_invoice": 0,
-        "total_amount": "0.00",
-        "real_amount": "0.10",
-        "invoice_amount": "0.00",
-        "create_time": "2018-01-24 11:43:33",
-        "district_name": "桃花源厅",
-        "district_photo": "",
-        "district_price": "0.00",
-        "district_min_price": "0.00",
-        "district_interval": 200,
-        "district_desc": "8人"
-      },
-      {
-        "order_id": 6355448061518548992,
-        "pay_mode": 2,
-        "pay_mode_value": "支付后置",
-        "order_status": 2,
-        "order_status_value": "已完成",
-        "pay_status": 2,
-        "pay_status_value": "已支付",
-        "is_offline_pay": 0,
-        "is_invoice": 0,
-        "total_amount": "0.00",
-        "real_amount": "0.10",
-        "invoice_amount": "0.00",
-        "create_time": "2018-01-24 11:43:33",
-        "district_name": "桃花源厅",
-        "district_photo": "",
-        "district_price": "0.00",
-        "district_min_price": "0.00",
-        "district_interval": 200,
-        "district_desc": "8人"
-      }
-    ]
+    tabs: ["当前订单", "历史订单"],
+    activeIndex: 0,
+
+    activeMenuIndex: 0,
+    showCart: false,
+
+    showSubGoods: false,
+
+    order: initOrder,
   },
   //事件处理函数
   bindViewTap: function() {
@@ -107,34 +42,61 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
-    // that = this;  
-    this.loadData()
+
+  currentOrderChange: function (e) {
+    var showtype = e.target.dataset.type;
+    this.currentOrderLoadData()
+    this.setData({
+      status: 0,
+    });
   },
 
-  loadData() {
+  historyOrderChange: function (e) {
+    var showtype = e.target.dataset.type;
+    this.historyOrderLoadData()
+    this.setData({
+      status: 1,
+    });
+  },
+
+  onLoad: function () {
+    // that = this;  
+    this.currentOrderLoadData()
+    this.setData({
+      status: 0,
+    });
+  },
+
+  currentOrderLoadData() {
     var that = this;
-    RequestOrderList({
+    RequestCurrentOrderList({
       success(res){
         if (res.statusCode == 200) {
-          // console.log("xxxxx Hello");
-          // console.log(res.data);
-
-
-
           var list2 = res.data.data;
           console.log(list2)
 
           that.setData({
-            list :list2
+            currentOrderList :list2
           });
-          // that.setData({
-          //   'review.list': list ? list.concat(list2) : list2,
-          //   'review.loading': false,
-          //   'review.page': page + 1,
-          //   'review.hasMore': data.count == 10
-          // })
+        }
+        else {
+          console.log("request fail");
+        }
+      }
+    });
+  },
 
+  historyOrderLoadData() {
+    var that = this;
+    RequestHistoryOrderList({
+      success(res) {
+        if (res.statusCode == 200) {
+          var list2 = res.data.data;
+          console.log(list2)
+
+          that.setData({
+            currentOrderList: list2
+          });
         }
         else {
           console.log("request fail");
@@ -142,4 +104,7 @@ Page({
       }
     });
   }
+
+
+
 })

@@ -1,13 +1,14 @@
+var token = "TOKEN_c0e726bca23d46f067a147d2a0fa9882";
+var Host = "https://api.iqrgo.com/"; 
 
-
-export function RequestOrderList(options) {
+// 当前订单列表
+export function RequestCurrentOrderList(options) {
   var {
     seller_id,
     success, complete
   } = options
-  console.log("request url");
   wx.request({
-    url: "https://api.iqrgo.com/order/getPaidList",
+    url: Host+"/order/getUnpaidList",
     header: {
       'content-type': 'application/json'
     },// 设置请求的 header
@@ -16,22 +17,30 @@ export function RequestOrderList(options) {
     data: {
       page_num: "1",
       page_size: "10",
-      token: "TOKEN_c0e726bca23d46f067a147d2a0fa9882"
+      token: token
     },
     success, complete
+  })
+}
 
-    // success: function (res) {
-      // if (res.statusCode == 200) {
-    //     // console.log(res.data);
-    //   } else {
-    //     console.log("index.js wx.request CheckCallUser statusCode" + res.statusCode);
-    //   }
-    // },
-    // fail: function () {
-    //   console.log("index.js wx.request CheckCallUser fail");
-    // },
-    // complete: function () {
-    //   // complete
-    // }
+// 历史订单列表
+export function RequestHistoryOrderList(options) {
+  var {
+    seller_id,
+    success, complete
+  } = options
+  wx.request({
+    url: Host +"/order/getPaidList",
+    header: {
+      'content-type': 'application/json'
+    },// 设置请求的 header
+    method: "POST",
+    //data: { cityname: "上海", key: "1430ec127e097e1113259c5e1be1ba70" },  
+    data: {
+      page_num: "1",
+      page_size: "10",
+      token: token
+    },
+    success, complete
   })
 }
