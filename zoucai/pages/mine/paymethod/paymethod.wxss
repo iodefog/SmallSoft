@@ -1,0 +1,14 @@
+.radio-group{
+  margin-top: 30rpx;
+}
+
+radio{
+  font-size: 36rpx;
+  margin-left: 20rpx;
+}
+
+.paymethod-tip{
+  font-size: 24rpx;
+  color: gray;
+  margin: 30rpx;
+}

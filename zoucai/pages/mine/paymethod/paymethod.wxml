@@ -1,0 +1,8 @@
+
+<radio-group class="radio-group" bindchange="paymethodTap">
+  <label class="radio" wx:for="{{tipsItems}}">
+    <radio value="{{item.tip}}" checked="{{item.checked}}"/>{{item.name}}
+  </label>
+</radio-group>
+
+<text class='paymethod-tip'>{{currentTip}}</text>

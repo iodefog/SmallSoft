@@ -106,7 +106,7 @@ View 还有个属性 align-self，可以覆盖父元素的 align-items 属性，
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
     padding-top: 10px;
 }
 
@@ -127,7 +127,7 @@ View 还有个属性 align-self，可以覆盖父元素的 align-items 属性，
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
     padding-top: 5px;
 }
 
@@ -151,7 +151,7 @@ View 还有个属性 align-self，可以覆盖父元素的 align-items 属性，
   justify-content:space-between;
   align-items: center;
   padding-top: 25px;
-  width: 100%;
+  width: 90%;
 }
 .blackLine{
     height: 1px; 

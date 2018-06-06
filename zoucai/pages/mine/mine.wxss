@@ -1,0 +1,68 @@
+page{
+  background-color:#f3f3f3;
+}
+
+.mine-header{
+  display: flex;
+  width: 100%;
+  height: 240rpx;
+  background-color: white;
+  margin-top: 30rpx;
+  align-items: center;
+}
+
+.mine-header .mine-header-icon{
+  width: 160rpx;
+  height: 160rpx;
+  background-color: blue;
+  border-radius: 100rpx;
+  margin-left: 30rpx;
+}
+
+.mine-header .mine-header-body{
+  display: flex;
+  padding-left: 30rpx;
+}
+
+.mine-header .mine-header-title{
+  font-size: 36rpx;
+}
+
+.mine-header .mine-header-subtitle{
+  padding-top: 30rpx;
+  font-size: 30rpx;
+  color: black;
+}
+
+.mine-header .mine-header-switch{
+    color: gray;
+    font-size: 30rpx;
+}
+
+
+
+.mine-item{
+  display: flex;
+  background-color: white;
+  align-items: center;
+  margin-top: 30rpx;
+  line-height: 100rpx;
+  width: 100%;
+}
+
+.mine-item .mine-item-icon{
+  margin-left: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.mine-item .mine-item-title{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  width: 75%;
+}
+
+.mine-item .mine-item-arrow{
+  width: 40rpx;
+  height: 40rpx;
+}

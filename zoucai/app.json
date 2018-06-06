@@ -2,7 +2,9 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/scroll/scroll"
+    "pages/business/business",
+    "pages/mine/mine",      
+    "pages/mine/paymethod/paymethod"  
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -20,13 +22,13 @@
         "selectedIconPath": "pages/images/order_selected.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/business/business",
         "text": "业务管理",
         "iconPath": "pages/images/business_unselected.png",
         "selectedIconPath": "pages/images/business_selected.png"
       },
       {
-        "pagePath": "pages/scroll/scroll",
+        "pagePath": "pages/mine/mine",
         "text": "个人中心",
         "iconPath": "pages/images/my_unselected.png",
         "selectedIconPath": "pages/images/my_selected.png"
