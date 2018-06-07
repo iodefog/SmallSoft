@@ -13,7 +13,7 @@
 <view class="goods" wx:if="{{status==1||item.status==status}}">
  <view class="menu-wrapper">
     <scroll-view scroll-y="true" style="height: 450px;">
-   <view wx:for="{{currentOrderList}}"  class="OrderCell" wx:for-item="data" >
+   <view wx:for="{{currentOrderList}}"  class="OrderCell" wx:for-item="data" bindtap="celltap" >
 
       <image class='OrderIcon' mode='scaleToFit' src='http://www.biaobaiju.com/uploads/20180111/02/1515610232-vkCOFYmeKd.jpg' ></image>
 
@@ -43,7 +43,7 @@
 <view class="goods" wx:if="{{status==0||item.status==status}}">
  <view class="menu-wrapper">
     <scroll-view scroll-y="true" style="height: 450px;">
-   <view wx:for="{{currentOrderList}}"  class="OrderCell" wx:for-item="data" >
+   <view wx:for="{{currentOrderList}}"  class="OrderCell" wx:for-item="data" bindtap="celltap" >
 
       <image class='OrderIcon' mode='scaleToFit' src='http://www.biaobaiju.com/uploads/20180111/02/1515610232-vkCOFYmeKd.jpg' ></image>
 

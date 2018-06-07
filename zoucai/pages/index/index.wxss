@@ -120,6 +120,7 @@ View 还有个属性 align-self，可以覆盖父元素的 align-items 属性，
   flex-direction: row-reverse;
   width: 30%;
   font-size: 15px;
+  padding-right: 20px;
 }
 
 .line2{
@@ -141,6 +142,7 @@ View 还有个属性 align-self，可以覆盖父元素的 align-items 属性，
   display: flex;
   flex-direction: row-reverse;
   width: 30%;
+  padding-right: 20px;
   font-size: 11px;
   color:  #aaa;
 }

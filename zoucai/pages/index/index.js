@@ -67,6 +67,14 @@ Page({
     });
   },
 
+  celltap: function() {
+    wx.navigateTo({
+      url: '../orderDetail/orderDetail'
+    })
+  },
+
+
+
   currentOrderLoadData() {
     var that = this;
     RequestCurrentOrderList({
@@ -104,7 +112,5 @@ Page({
       }
     });
   }
-
-
 
 })

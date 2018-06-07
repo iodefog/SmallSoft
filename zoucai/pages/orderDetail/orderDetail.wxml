@@ -1,0 +1,50 @@
+<!--OrderDetail.wxml-->
+<!-- <text>OrderDetail.wxml</text> -->
+<view class='container'>
+<scroll-view class='scrollview'>
+
+<view class='order-info-item'>
+<text class='order-info-title'>title1</text> 
+<text class='order-info-value'>value1</text>
+</view>
+
+<view class='order-info-item'>
+<text class='order-info-title'>title1</text> 
+<text class='order-info-value'>value1</text>
+</view>
+
+<view class='order-info-item'>
+<text class='order-info-title'>title1</text> 
+<text class='order-info-value'>value1</text>
+</view>
+
+<view class='order-info-item'>
+<text class='order-info-title'>title1</text> 
+<text class='order-info-value'>value1</text>
+</view>
+
+<view class='order-info-item'>
+<text class='order-info-title'>title1</text> 
+<text class='order-info-value'>value1</text>
+</view>
+
+<view class='order-info-item'>
+<text class='order-info-title'>title1</text> 
+<text class='order-info-value'>value1</text>
+</view>
+
+<view class='order-info-item'>
+<text class='order-info-title'>title1</text> 
+<text class='order-info-value'>value1</text>
+</view>
+
+<view class='order-info-item'>
+<text class='order-info-title'>title1</text> 
+<text class='order-info-value'>value1</text>
+</view>
+
+
+</scroll-view>
+
+
+</view>

@@ -13,7 +13,6 @@ export function RequestCurrentOrderList(options) {
       'content-type': 'application/json'
     },// 设置请求的 header
     method: "POST",
-    //data: { cityname: "上海", key: "1430ec127e097e1113259c5e1be1ba70" },  
     data: {
       page_num: "1",
       page_size: "10",
@@ -35,10 +34,29 @@ export function RequestHistoryOrderList(options) {
       'content-type': 'application/json'
     },// 设置请求的 header
     method: "POST",
-    //data: { cityname: "上海", key: "1430ec127e097e1113259c5e1be1ba70" },  
     data: {
       page_num: "1",
       page_size: "10",
+      token: token
+    },
+    success, complete
+  })
+}
+
+// 获取订单详情
+export function RequestOrderDetailList(options) {
+  var {
+    seller_id,
+    success, complete
+  } = options
+  wx.request({
+    url: Host + "/order/getOrderDetail",
+    header: {
+      'content-type': 'application/json'
+    },// 设置请求的 header
+    method: "POST",
+    data: {
+      order_id: "6400793641425707008",
       token: token
     },
     success, complete
