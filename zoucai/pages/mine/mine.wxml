@@ -1,12 +1,12 @@
 
 <view class='mine-header'>
-<image class='mine-header-icon' src=''></image>
+<image class='mine-header-icon' src='{{userData.merchant_logo}}'></image>
 <view class='mine-header-body'>
 <view>
-<view class=' mine-header-title'>老重庆火锅老重庆火锅</view>
-<view class=' mine-header-subtitle'>正宗重庆百年火锅</view>
+<view class=' mine-header-title'>{{userData.merchant_name}}</view>
+<view class=' mine-header-subtitle'>{{userData.merchant_desc}}</view>
 </view>
-<switch class='mine-header-switch'>打烊</switch>
+<switch class='mine-header-switch' checked='{{serverOn}}' bindchange='serverChange'>{{serverTitle}}</switch>
 </view>
 </view>
 

@@ -36,7 +36,6 @@ App({
   globalData: {
     appversion: "v1.2.9",
     Host:"https://api.iqrgo.com/",
-    HTTPHost: "http://api.iqrgo.com/",
     Token:"TOKEN_c0e726bca23d46f067a147d2a0fa9882",
     userInfo: null
   }

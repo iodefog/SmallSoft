@@ -14,7 +14,7 @@ page{
 .mine-header .mine-header-icon{
   width: 160rpx;
   height: 160rpx;
-  background-color: blue;
+  background-color: lightgray;
   border-radius: 100rpx;
   margin-left: 30rpx;
 }

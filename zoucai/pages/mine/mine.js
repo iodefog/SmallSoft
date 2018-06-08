@@ -1,18 +1,24 @@
-// pages/mine/mine.js
+
+import{
+  merchantget
+} from "../api/apis.js"
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    userData: null,
+    serverOn: true,
+    serverTitle: "正在营业",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+   
   },
 
   /**
@@ -26,7 +32,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    var self = this;
+    merchantget({
+      success(res) {
+        var data = res.data.data;
+        self.setData({
+          userData: data,
+        })
+
+        console.log(data)
+      }
+    })
   },
 
   /**
@@ -62,6 +78,19 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+
+  serverChange : function(e){
+    var option = e.detail.value;
+    var title = "正在营业";
+    if (option == false){
+      title = "打烊";
+    }
+    this.setData({
+      serverOn: option,
+      serverTitle: title,
+    })
   },
 
   mineItemTap:function(e){
