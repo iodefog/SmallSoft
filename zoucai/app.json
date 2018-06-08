@@ -5,6 +5,8 @@
     "pages/business/business",
     "pages/mine/mine",      
     "pages/mine/paymethod/paymethod",
+    "pages/mine/password/password",  
+    "pages/mine/contactus/contactus",      
     "pages/orderDetail/orderDetail"       
   ],
   "window": {

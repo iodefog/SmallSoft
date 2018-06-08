@@ -1,11 +1,14 @@
-// pages/mine/mine.js
+// pages/mine/contactus/contactus.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+      dataArray:[{"title":"官方网址:","value":"http://www.iqrgo.com"},
+        { "title": "邮箱:", "value": "arcticfoxstudio@163.com" },
+        { "title": "手机:", "value": "17600006007" },
+      ]
   },
 
   /**
@@ -64,22 +67,16 @@ Page({
   
   },
 
-  mineItemTap:function(e){
-    var showtype = e.currentTarget.dataset.replyType;
-  if(showtype == "0"){
-    wx.navigateTo({
-      url: "./paymethod/paymethod",
-    })
-  }
-  else if (showtype == "1") {
-    wx.navigateTo({
-      url: "./password/password",
-    })
-  }
-  else if (showtype == "2") {
-    wx.navigateTo({
-      url: "./contactus/contactus",
-    })
-  }
+  itemTap : function(e){
+    var id = e.currentTarget.dataset.id;
+    if(id == 0){
+      
+    }
+    else if(id == 1){
+
+    }
+    else if(id ==2){
+
+    }
   }
 })

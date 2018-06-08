@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
-	"appid": "touristappid",
+	"appid": "wx2b324b03ef50bd66",
 	"projectname": "zoucai2",
 	"condition": {
 		"search": {
@@ -29,12 +29,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
 					"id": 0,
 					"name": "mine",
-					"pathName": "pages/mine/paymethod/paymethod",
+					"pathName": "pages/mine/contactus/contactus",
 					"query": ""
 				}
 			]

@@ -58,7 +58,7 @@ page{
 
 .mine-item .mine-item-title{
   margin-left: 30rpx;
-  font-size: 30rpx;
+  font-size: 36rpx;
   width: 75%;
 }
 

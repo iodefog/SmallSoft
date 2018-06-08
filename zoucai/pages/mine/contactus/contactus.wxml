@@ -1,0 +1,5 @@
+
+<view wx:for="{{dataArray}}" data-id="{{index}}" class="item" bindtap='itemTap'>
+<view class='item-title'>{{item.title}}</view>
+<view class='item-value'>{{item.value}}</view>
+</view>
