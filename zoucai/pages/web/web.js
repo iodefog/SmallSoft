@@ -1,18 +1,31 @@
-// pages/mine/mine.js
+
+const app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+      url:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var url = options.url;
+    var title = options.title;
+    wx.setNavigationBarTitle({
+      title: title,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+    self = this;
+    this.setData({
+      url: url + "?token=" + app.globalData.Token
+    })
   },
 
   /**
@@ -62,29 +75,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  mineItemTap:function(e){
-    var showtype = e.currentTarget.dataset.replyType;
-  if(showtype == "0"){
-    wx.navigateTo({
-      url: "./paymethod/paymethod",
-    })
-  }
-  else if (showtype == "1") {
-    wx.navigateTo({
-      url: "./password/password",
-    })
-  }
-  else if (showtype == "2") {
-    wx.navigateTo({
-      url: "./contactus/contactus",
-    })
-  }
-  else if (showtype == "3") {
-    wx.navigateTo({
-      url: "../web/web?url=http://api.iqrgo.com/qrgo_agreement.html&title=码上用户协议",
-    })
-  }
   }
 })

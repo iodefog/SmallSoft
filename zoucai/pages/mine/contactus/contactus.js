@@ -68,15 +68,18 @@ Page({
   },
 
   itemTap : function(e){
-    var id = e.currentTarget.dataset.id;
-    if(id == 0){
+    var index = e.currentTarget.dataset.index;
+    var item = e.currentTarget.dataset.item;
+    if (index == 0){
       
     }
-    else if(id == 1){
+    else if (index == 1){
 
     }
-    else if(id ==2){
-
+    else if (index ==2){
+      wx.makePhoneCall({
+        phoneNumber: item.value,
+      })
     }
   }
 })

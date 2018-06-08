@@ -10,13 +10,13 @@
 </view>
 </view>
 
-<view class='mine-item' bindtap='mineItemTap' data-reply-Type="0">
+<view class='mine-item-top' bindtap='mineItemTap' data-reply-Type="0">
 <image class='mine-item-icon' src='../images/pay@2x.png'></image>
 <view class='mine-item-title'>修改支付方式</view>
 <image class='mine-item-arrow' src='../images/icome_arrows_v5@2x.png'></image>
 </view>
 
-<view class='mine-item' bindtap='mineItemTap' data-reply-Type="1">
+<view class='mine-item-top' bindtap='mineItemTap' data-reply-Type="1">
 <image class='mine-item-icon' src='../images/key@2x.png'></image>
 <view class='mine-item-title'>修改密码</view>
 <image class='mine-item-arrow' src='../images/icome_arrows_v5@2x.png'></image>
@@ -25,5 +25,11 @@
 <view class='mine-item' bindtap='mineItemTap' data-reply-Type="2">
 <image class='mine-item-icon' src='../images/contact_us@2x.png'></image>
 <view class='mine-item-title'>联系我们</view>
+<image class='mine-item-arrow' src='../images/icome_arrows_v5@2x.png'></image>
+</view>
+
+<view class='mine-item' bindtap='mineItemTap' data-reply-Type="3">
+<image class='mine-item-icon' src='../images/协议@2x.png'></image>
+<view class='mine-item-title'>码上用户协议</view>
 <image class='mine-item-arrow' src='../images/icome_arrows_v5@2x.png'></image>
 </view>

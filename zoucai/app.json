@@ -1,13 +1,24 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/orderDetail/orderDetail",
     "pages/business/business",
-    "pages/mine/mine",      
+
+    "pages/business/rownumber/rownumber", 
+    "pages/business/queue/queue",
+    "pages/business/machine/machine",
+    "pages/business/bankcard/bankcard",
+    "pages/business/income/income",        
+    "pages/business/goodsmanager/goodsmanager",
+    "pages/business/categorymanager/categorymanager",
+    "pages/business/desktopmanager/desktopmanager",
+
+    "pages/mine/mine",
     "pages/mine/paymethod/paymethod",
-    "pages/mine/password/password",  
-    "pages/mine/contactus/contactus",      
-    "pages/orderDetail/orderDetail"       
+    "pages/mine/password/password",
+    "pages/mine/contactus/contactus",
+    "pages/web/web",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -40,29 +40,37 @@ page{
 }
 
 
+.mine-item-top{
+  display: flex;
+  background-color: white;
+  align-items: center;
+  line-height: 100rpx;
+  width: 100%;
+  margin-top: 30rpx;
+}
 
 .mine-item{
   display: flex;
   background-color: white;
   align-items: center;
-  margin-top: 30rpx;
   line-height: 100rpx;
   width: 100%;
+  margin-top: 4rpx;
 }
 
-.mine-item .mine-item-icon{
+ .mine-item-icon{
   margin-left: 30rpx;
   width: 60rpx;
   height: 60rpx;
 }
 
-.mine-item .mine-item-title{
+ .mine-item-title{
   margin-left: 30rpx;
   font-size: 36rpx;
   width: 75%;
 }
 
-.mine-item .mine-item-arrow{
+ .mine-item-arrow{
   width: 40rpx;
   height: 40rpx;
 }

@@ -1,4 +1,4 @@
-// pages/mine/mine.js
+// pages/business/desktopmanager/desktopmanager.js
 Page({
 
   /**
@@ -62,29 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  mineItemTap:function(e){
-    var showtype = e.currentTarget.dataset.replyType;
-  if(showtype == "0"){
-    wx.navigateTo({
-      url: "./paymethod/paymethod",
-    })
-  }
-  else if (showtype == "1") {
-    wx.navigateTo({
-      url: "./password/password",
-    })
-  }
-  else if (showtype == "2") {
-    wx.navigateTo({
-      url: "./contactus/contactus",
-    })
-  }
-  else if (showtype == "3") {
-    wx.navigateTo({
-      url: "../web/web?url=http://api.iqrgo.com/qrgo_agreement.html&title=码上用户协议",
-    })
-  }
   }
 })

@@ -1,2 +1,32 @@
-<!--pages/business/business.wxml-->
-<text>pages/business/business.wxml</text>
+<view class="headerview">
+
+<view class='headerview-item'>
+  <image class='item-icon' src='../images/today_income@2x.png'></image>
+  <view class='item-tip'>今日收入(元)</view>
+  <view class='item-value'>0.00</view>
+</view>
+
+<view class='headerview-item'>
+  <image class='item-icon' src='../images/account_balance@2x.png'></image>
+  <view class='item-tip'>账户余额(元)</view>
+  <view class='item-value'>0.00</view>
+</view>
+
+<view class='headerview-item'>
+  <image class='item-icon' src='../images/today_order@2x.png'></image>
+  <view class='item-tip'>今日订单数</view>
+  <view class='item-value'>0.00</view>
+</view>
+
+</view>
+
+<view class="weui-grids">  
+    <view class="weui-grid" wx:for="{{items}}" wx:key="name">  
+      <navigator url="{{item.url}}">  
+        <view class="weui-grid__icon">  
+          <image class='weui-grid-icon' src=" {{item.icon}}" mode="scaleToFill" />  
+        </view>  
+        <text class="weui-grid-label">{{item.title}}</text>  
+      </navigator>  
+    </view>  
+  </view>  

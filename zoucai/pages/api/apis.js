@@ -1,5 +1,3 @@
-var token = "TOKEN_c0e726bca23d46f067a147d2a0fa9882";
-var Host = "https://api.iqrgo.com/"; 
 
 // 当前订单列表
 export function RequestCurrentOrderList(options) {
