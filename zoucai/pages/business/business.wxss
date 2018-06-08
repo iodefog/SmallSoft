@@ -87,7 +87,7 @@ page{
 }
 
 .weui-grid-icon{
-  padding-left: 60rpx;
-  width: 80rpx;
-  height: 80rpx;
+  padding-left: 80rpx;
+  width: 50rpx;
+  height: 50rpx;
 }
