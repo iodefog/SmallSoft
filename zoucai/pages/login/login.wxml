@@ -1,0 +1,32 @@
+<view class="header"></view>
+
+<view class='blueBackground'>
+<image class='icon' src='../images/logo_white@2x.png'></image>
+<view class='title'>码上</view>
+</view>
+
+
+<view class="content">
+<form bindsubmit="formSubmit">
+
+<view class="login-item-avatar">
+<image class='login-item-icon' src='../images/login_avatar@2x.png'></image>
+<input name="avatar" class='login-item-input' placeholder='请输入账号'></input>
+</view>
+<view class='login-line'></view>
+
+<view class="login-item-password">
+<image class='login-item-icon' src='../images/login_lock@2x.png'></image>
+<input name="password" class='login-item-input' password='true' placeholder='请输入密码'></input>
+</view>
+<view class='login-line'></view>
+
+<view class='more'>
+<view class='register'>快速注册</view>
+<view class='forgetpassword'>忘记密码</view>
+</view>
+
+<button class='loginButton' formType="submit" >登录</button>
+</form>
+</view>
+

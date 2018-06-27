@@ -1,0 +1,91 @@
+page{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.blueBackground{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 400rpx;
+  background-color: #0080FF;
+  align-items: center;
+}
+
+.blueBackground .icon{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.blueBackground .title{
+  color: white;
+  font-weight:bold; 
+}
+
+.content{
+  background-color: white;
+  width: 80%;
+  height: 400rpx;
+  margin-top: 40rpx;
+  margin-left: 70rpx;
+  border: 1rpx solid lightgrey;
+  border-radius: 10rpx;
+  }
+
+.login-item-avatar{
+    display: flex;
+    flex-direction: row;
+    margin: 20rpx;
+    padding-top: 40rpx;
+  }
+
+.login-item-password{
+    display: flex;
+    flex-direction: row;
+    margin: 20rpx;
+  }
+
+.login-item-icon{
+    width: 50rpx;
+    height: 50rpx;
+  }
+
+.login-item-input{
+    margin-left: 10rpx;
+  }
+
+  .login-line{
+    width: 100%;
+    height: 1rpx;
+    background-color: rgb(200, 200, 200);
+  }
+
+.more{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80rpx;
+}
+
+.more .register{
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+
+.more .forgetpassword{
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+}
+
+.loginButton{
+  margin-left: 50rpx;
+  background-color: #0080FF;
+  width: 80%;
+  line-height: 70rpx;
+  border-radius:35rpx; 
+  text-align: center;
+  color: white;
+}

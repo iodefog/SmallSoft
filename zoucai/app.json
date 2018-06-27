@@ -18,6 +18,9 @@
     "pages/mine/password/password",
     "pages/mine/contactus/contactus",
     "pages/web/web",
+
+    "pages/login/login",        
+
     "pages/logs/logs"
   ],
   "window": {
